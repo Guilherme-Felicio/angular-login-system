@@ -1,0 +1,28 @@
+header { 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  height: 5vh;
+
+  p {
+    grid-column: 4/12;
+    align-self: center;
+    b {
+      color: #E9C46A;
+      text-decoration: underline;
+    }
+    b:hover {
+      cursor: pointer;
+    }
+    text-align: end;
+  }
+
+  div.logo{
+  grid-column: 2;
+  font-family: 'Cookie', cursive;
+  font-size: 48px;
+  color: #E9C46A;
+ } 
+
+}
+

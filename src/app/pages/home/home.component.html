@@ -1,0 +1,32 @@
+<div class="homeContainer">
+  <h3>Bem vindo ao sistema de login</h3>
+  <div class="loginContainer">
+    <p>Digite seu email e senha</p>
+    <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+      <label for="email"
+        ><span>Email</span>
+        <input type="email" formControlName="email" id="email" email />
+      </label>
+      <app-input-error-message
+        *ngIf="
+          loginForm.get('email')?.errors &&
+          loginForm.get('email')?.dirty &&
+          loginForm.get('email')?.touched
+        "
+        [mensagem]="'Digite um email Valido, por favor'"
+      ></app-input-error-message>
+      <label for="senha">
+        <span>Senha</span>
+        <input type="password" formControlName="senha" />
+      </label>
+      <app-input-error-message
+        *ngIf="
+          loginForm.get('senha')?.errors && loginForm.get('senha')?.touched
+        "
+        [mensagem]="'Digite uma senha, por favor'"
+      ></app-input-error-message>
+      <button disabled="{{ !loginForm.valid }}">Login</button>
+      <a href="">Esqueci minha senha</a>
+    </form>
+  </div>
+</div>

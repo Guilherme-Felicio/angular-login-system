@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+
+* {
+  font-family: 'IBM Plex Mono', 'monaco',monospace;
+  color: #fff;
+}
+
+html {
+  background: #0B090A;
+}
+
+input {
+  border: 1px solid #E9C46A;
+  border-radius: 8px;
+  height: 3rem;
+
+  span{
+    font-size: 1.2rem;
+  }
+}
+
+ span{
+  margin-bottom: .5rem;
+}
+
+button { 
+  background: #E9C46A;
+  border: none;
+  border-radius: 8px;
+  color: #0B090A;
+  font-size: 1.1rem;
+}
+
+button:hover{
+  cursor: pointer;
+}
